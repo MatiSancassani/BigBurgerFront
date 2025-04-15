@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     const GoogleLoginButton = () => {
-        window.location.href = 'https://bigburgerbackend-1.onrender.com/api/google';
+        window.location.href = 'https://bigburgerbackend.onrender.com/api/google';
     }
     const facebookLoginButton = () => {
-        window.location.href = 'https://bigburgerbackend-1.onrender.com/api/facebook';
+        window.location.href = 'https://bigburgerbackend.onrender.com/api/facebook';
     }
     return (
         <div className='flex items-center justify-center'>

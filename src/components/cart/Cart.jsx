@@ -32,7 +32,7 @@ function Cart() {
     }, 0);
 
     const deleteAllProducts = async () => {
-        await fetch(`https://bigburgerbackend-1.onrender.com/api/carts/${cart_id}`, {
+        await fetch(`https://bigburgerbackend.onrender.com/api/carts/${cart_id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function Cart() {
     };
 
     const deleteProduct = async (id) => {
-        await fetch(`https://bigburgerbackend-1.onrender.com/api/carts/${cart_id}/product/${id}`, {
+        await fetch(`https://bigburgerbackend.onrender.com/api/carts/${cart_id}/product/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

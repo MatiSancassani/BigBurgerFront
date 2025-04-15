@@ -44,7 +44,7 @@ const SignUp = () => {
 
             }
 
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/register", {
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/register", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include', // Necesario si `credentials: true` en backend

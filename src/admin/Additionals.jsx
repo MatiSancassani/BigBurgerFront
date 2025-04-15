@@ -18,7 +18,7 @@ const Additionals = () => {
         formData.append('category', category);
 
         try {
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/additionals", {
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/additionals", {
                 method: "POST",
                 body: formData,
                 credentials: "include",

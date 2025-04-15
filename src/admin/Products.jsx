@@ -14,7 +14,7 @@ const Products = () => {
 
     const getProduct = async () => {
         try {
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/products");
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/products");
 
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
@@ -46,7 +46,7 @@ const Products = () => {
         formData.append('category', category);
 
         try {
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/products", {
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/products", {
                 method: "POST",
                 body: formData,
                 credentials: "include",

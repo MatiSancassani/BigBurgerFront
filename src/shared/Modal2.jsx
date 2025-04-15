@@ -74,7 +74,7 @@ const Modal2 = ({ isOpen, closeModal, id }) => {
         });
 
         try {
-            const response = await fetch(`https://bigburgerbackend-1.onrender.com/api/carts/${cart_id}/product/${productId}`, {
+            const response = await fetch(`https://bigburgerbackend.onrender.com/api/carts/${cart_id}/product/${productId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const Modal2 = ({ isOpen, closeModal, id }) => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`https://bigburgerbackend-1.onrender.com/api/products/${productId}`);
+                const response = await fetch(`https://bigburgerbackend.onrender.com/api/products/${productId}`);
                 const data = await response.json();
                 setProductos(data.data);
             } catch (error) {
@@ -127,7 +127,7 @@ const Modal2 = ({ isOpen, closeModal, id }) => {
     useEffect(() => {
         const fetchAdditional = async () => {
             try {
-                const response = await fetch(`https://bigburgerbackend-1.onrender.com/api/additionals`);
+                const response = await fetch(`https://bigburgerbackend.onrender.com/api/additionals`);
                 const data = await response.json();
                 setAdditionals(data.data);
             } catch (error) {

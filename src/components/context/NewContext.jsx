@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
     useEffect(() => {
         const checkSession = async () => {
             try {
-                const res = await fetch('https://bigburgerbackend-1.onrender.com/api/session', {
+                const res = await fetch('https://bigburgerbackend.onrender.com/api/session', {
                     credentials: 'include'
                 });
 
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
         if (!cart_id) return;
 
         try {
-            const response = await fetch(`https://bigburgerbackend-1.onrender.com/api/carts/${cart_id}`);
+            const response = await fetch(`https://bigburgerbackend.onrender.com/api/carts/${cart_id}`);
             const data = await response.json();
 
             if (data.data.products) {
@@ -65,7 +65,7 @@ export const CartProvider = ({ children }) => {
     // Iniciar sesión y obtener carrito
     const login = async (email, password) => {
         try {
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/login", {
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: 'include',
@@ -88,7 +88,7 @@ export const CartProvider = ({ children }) => {
 
     useEffect(() => {
         const getProduct = async () => {
-            const response = await fetch("https://bigburgerbackend-1.onrender.com/api/products");
+            const response = await fetch("https://bigburgerbackend.onrender.com/api/products");
             const data = await response.json();
             setProducts(data.data);
         };
@@ -99,7 +99,7 @@ export const CartProvider = ({ children }) => {
     // Cerrar sesión
     const logout = async () => {
         try {
-            const response = await fetch('https://bigburgerbackend-1.onrender.com/api/logout', {
+            const response = await fetch('https://bigburgerbackend.onrender.com/api/logout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

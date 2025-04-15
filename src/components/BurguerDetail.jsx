@@ -17,7 +17,7 @@ const BurguerDetail = () => {
     useEffect(() => {
         const getProductById = async () => {
             try {
-                const response = await fetch(`https://bigburgerbackend-1.onrender.com/api/products/${id}`);
+                const response = await fetch(`https://bigburgerbackend.onrender.com/api/products/${id}`);
                 const data = await response.json();
                 setProductos(data.data);
             } catch (error) {
