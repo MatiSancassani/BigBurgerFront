@@ -15,7 +15,6 @@ const Menu = () => {
                 const response = await fetch("https://bigburgerbackend.onrender.com/api/products");
                 const data = await response.json();
                 setProducts(data.data);
-
             } catch (error) {
                 console.error("Error fetching products:", error);
             } finally {
@@ -33,11 +32,11 @@ const Menu = () => {
             <NavBarForMenuComp />
 
             {loading ? (
-                <div className="flex items-center justify-center w-screen h-screen">
+                <div className="w-[100%] h-screen flex items-center justify-center">
                     <BurgerLoader />
                 </div>
             ) : (
-                <div className="flex flex-col items-center justify-center mt-[4rem] lg:mt-0">
+                <div className="flex flex-col items-center justify-center mt-[3rem] lg:mt-[4rem]">
                     <div className="flex flex-col">
                         {categorias.map((categoria) => (
                             <CategorySection key={categoria} category={categoria} productos={products} />
