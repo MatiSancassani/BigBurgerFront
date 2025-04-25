@@ -86,16 +86,6 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    useEffect(() => {
-        const getProduct = async () => {
-            const response = await fetch("https://bigburgerbackend.onrender.com/api/products");
-            const data = await response.json();
-            setProducts(data.data);
-        };
-
-        getProduct();
-    }, []);
-
     // Cerrar sesión
     const logout = async () => {
         try {
@@ -116,7 +106,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <NewContext.Provider value={{ cart, setCart, getCart, login, logout, user, products }}>
+        <NewContext.Provider value={{ cart, setCart, getCart, login, logout, user }}>
             {children}
         </NewContext.Provider>
     );
